@@ -7,7 +7,7 @@ interface HeadingProps {
 }
 
 export function Heading({ level = 2, children, className = "" }: HeadingProps) {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+  const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
   return <Tag className={className}>{children}</Tag>;
 }
 
@@ -33,4 +33,3 @@ export function Label({ children, className = "", htmlFor }: LabelProps) {
     </label>
   );
 }
-
